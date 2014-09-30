@@ -52,6 +52,7 @@ module GrapeSwagger
       # Marks down the given text to html format.
       ###
       def markdown(text)
+        @markdown = Redcarpet::Markdown.new(@renderer, @extension_options)
         @markdown.render(text)
       end
 
